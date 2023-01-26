@@ -5,7 +5,7 @@ lower = 0
 letter = 0
 string = input("Enter a string: ")
 for i in string:
-    if i.isalpha:
+    if not i.isspace():
         letter += 1
     if i.isupper():
         upper += 1
@@ -13,9 +13,10 @@ for i in string:
         lower += 1
     if i in "aeiouAEIOU":
         vowel += 1
-    if i.isalpha and i not in "aeiouAEIOU"
+    if i.isalpha() and i not in "aeiouAEIOU":
         consonant += 1
-print("""Number of upper case letters: {}
+print("""Number of letters: {}
+Number of upper case letters: {}
 Number of lower case letters: {}
 Number of vowels: {}
-Number of consonants: {}""".format(upper, lower, vowel, consonant))
+Number of consonants: {}""".format(letter, upper, lower, vowel, consonant))
